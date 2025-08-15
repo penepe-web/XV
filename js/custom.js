@@ -1,99 +1,26 @@
-(function($) {
-    "use strict";
-	
-	
-	/* ..............................................
-	Loader 
-    ................................................. */
-	
-$(document).ready(function() {
-    // Bloquear scroll al inicio
-    $('body').css({'overflow':'hidden'});
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const mins = document.getElementById("mins");
+const seconds = document.getElementById("seconds");
 
-    // Animación automática del sobre (simulada con CSS o jQuery animate)
-    // Aquí usamos un setTimeout para 5 segundos
-    setTimeout(function() {
-        // La animación terminó, ahora permitimos clicks para cerrar
-        $('#preloader').addClass('clickable'); 
-    }, 5000); // 5000ms = 5 segundos
+const newYear = '18 Oct 2024';
 
-    // Función para cerrar preloader y reproducir música
-    function closePreloader() {
-        $('#preloader').fadeOut('slow');
-        $('body').css({'overflow':'visible'});
-        $('#bg-music')[0].play();
-    }
+function countTimer(){
+    const newYearDate = new Date(newYear);
+    const currentDate = new Date();
 
-    // Click en sobre, carta, logo o corazones
-    $('#envelope, .letter, .hearts, .navbar-brand img').on('click', function() {
-        if ($('#preloader').hasClass('clickable')) {
-            closePreloader();
-        }
-    });
-});
-    	
-	/* ..............................................
-    Navbar Bar
-    ................................................. */
-	
-	$('.navbar-nav .nav-link').on('click', function() {
-		var toggle = $('.navbar-toggler').is(':visible');
-		if (toggle) {
-			$('.navbar-collapse').collapse('hide');
-		}
-	});
-	
-	/* ..............................................
-    Fixed Menu
-    ................................................. */
+    const totalSeconds = (newYearDate - currentDate) / 1000;
+
+    const daysCalc = Math.floor(totalSeconds / 3600 / 24);
+    const hoursCalc = Math.floor(totalSeconds / 3600) % 24;
+    const minsCalc = Math.floor(totalSeconds / 60) % 60;
+    const secondsCalc = Math.floor(totalSeconds % 60);
     
-	$(window).on('scroll', function () {
-		if ($(window).scrollTop() > 50) {
-			$('.top-header').addClass('fixed-menu');
-		} else {
-			$('.top-header').removeClass('fixed-menu');
-		}
-	});
-	
-	/* ..............................................
-    Gallery
-    ................................................. */
-	
-	$(document).ready(function() {
-		$('.popup-gallery').magnificPopup({
-			delegate: 'a',
-			type: 'image',
-			tLoading: 'Loading image #%curr%...',
-			mainClass: 'mfp-img-mobile',
-			gallery: {
-				enabled: true,
-				navigateByImgClick: true,
-				preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-			},
-			image: {
-				tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-				titleSrc: function(item) {
-					return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-				}
-			}
-		});
-	});
-	
-	/* ..............................................
-    Smooth Scroll
-    ................................................. */
-	
-	$('a[href*="#"]:not([href="#"])').on('click', function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-		  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			  if (target.length) {
-				$('html,body').animate({
-				  scrollTop: target.offset().top - 65,
-				  }, 1000);
-				  return false;
-			  }
-		}
-	});
-	
-}(jQuery));
+    days.innerHTML = daysCalc;
+    hours.innerHTML = hoursCalc;
+    mins.innerHTML = minsCalc;
+    seconds.innerHTML = secondsCalc;
+}
+countTimer();
+
+setInterval(countTimer, 1000);
