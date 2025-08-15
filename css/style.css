@@ -160,7 +160,7 @@ button:focus{
     right: 0;
     bottom: 0;
     left: 0;
-    background: #dd666c;
+    background: #b9a0d5;
     z-index: 11000;
     position: fixed;
     display: block;
@@ -289,12 +289,12 @@ button:focus{
 }
 
 .top-header .navbar .navbar-collapse ul li a.active{
-	background: #dd666c;
+	background: #b9a0d5;
 	color: #ffffff;
 }
 
 .top-header .navbar .navbar-collapse ul li a:hover{
-	background: #63c7bd;
+	background: #c3a6df;
 	color: #ffffff;
 }
 
@@ -314,7 +314,7 @@ button:focus{
 }
 
 .navbar-toggler{
-	border: 1px solid #61D2B4;
+	border: 1px solid #b9a0d5;
 	border-radius: 0;
 	margin: 16px 15px;
 	padding: 10px 10px;
@@ -324,7 +324,7 @@ button:focus{
 	transition: all 0.2s linear;
 }
 .navbar-toggler span{
-	background: #61D2B4;
+	background: #b9a0d5;
 	display: block;
 	width: 25px;
 	height: 2px;
@@ -343,11 +343,11 @@ button:focus{
 }
 
 .navbar-toggler:hover{
-	border: 1px solid #dd666c;
+	border: 1px solid #c3a6df;
 }
 
 .navbar-toggler:hover span{
-	background: #dd666c;
+	background: #c3a6df;
 }
 
 
@@ -408,12 +408,12 @@ button:focus{
 	z-index: 3;
 }
 .lbox-details p strong{
-	color: #dd666c;
+	color: #c3a6df;
 	font-size: 40px;
 	font-family: 'Marck Script', cursive;
 }
 .lbox-details a.btn{
-	background: #63c7bd;
+	background: #b9a0d5;
 	padding: 10px 20px;
 	font-size: 20px;
 	text-transform: uppercase;
@@ -423,7 +423,7 @@ button:focus{
 	z-index: 3;
 }
 .lbox-details a.btn:hover{
-	background: #dd666c;
+	background: #c3a6df;
 }
 
 /*------------------------------------------------------------------
@@ -444,7 +444,7 @@ button:focus{
 	color: #222222;
 }
 .title-box h2 span{
-	color: #dd666c;
+	color: #c3a6df;
 	text-decoration: underline;
 }
 .about-main-info h2{
@@ -452,7 +452,7 @@ button:focus{
 	font-family: 'Marck Script', cursive;
 }
 .about-main-info h2 span{
-	color: #dd666c;
+	color: #c3a6df;
 	text-decoration: underline;
 }
 
@@ -548,11 +548,11 @@ button:focus{
 }
 
 .main-timeline-box .time-line-date-content .mbr-timeline-date{
-	background: #dd666c;
+	background: #c3a6df;
 	color: #ffffff;
 }
 .main-timeline-box .reverse .time-line-date-content .mbr-timeline-date{
-	background: #63c7bd;
+	background: #b9a0d5;
 	color: #ffffff;
 }
 
@@ -638,7 +638,7 @@ button:focus{
 	-moz-transition: all 0.3s ease-in-out;
 }
 .gallery-box ul li a .overlay{
-	background: #dd666c;
+	background: #c3a6df;
 	color: #ffffff;
 	font-size: 22px;
 	text-align: center;
@@ -681,7 +681,7 @@ button:focus{
 }
 
 .event-inner a{
-	background: #dd666c;
+	background: #c3a6df;
 	color: #ffffff;
 	padding: 5px 10px;
 	display: inline-block;
@@ -723,7 +723,7 @@ button:focus{
 }
 
 .submit-button .btn-common{
-	background-color: #63c7bd;
+	background-color: #c3a6df;
 	height: 45px;
 	line-height: 45px;
 	font-size: 16px;
@@ -745,7 +745,7 @@ button:focus{
 	transition: all 0.3s;
 }
 .submit-button .btn-common:hover{
-	background-color: #dd666c;
+	background-color: #c3a6df;
 }
 
 .custom-select{
@@ -772,12 +772,20 @@ select.form-control:not([size]):not([multiple]){
 }
 
 .footer-box .footer-company-name a{
-	color: #dd666c;
+	color: #c3a6df;
 }
 .footer-box .footer-company-name a:hover{
-	color: #63c7bd;
+	color: #b9a0d5;
 }
 
+body {
+    background-color: #ffffff; /* color mientras está el preloader */
+    transition: background-color 0.5s ease;
+}
+
+body.loaded {
+    background-color: #b9a0d5; /* morado pastel después */
+}
 
 
 

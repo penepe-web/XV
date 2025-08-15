@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   top: 150px;
-  background-color: #00334c;
+  background-color: #cca9dd;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -17,7 +17,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff; /* Fondo del preloader */
+    background: #000000; /* Fondo del preloader */
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -36,16 +36,16 @@
   border-right: 140px solid transparent;
   border-bottom: 82px solid transparent;
   /* a little smaller */
-  border-top: 98px solid #00334c;
+  border-top: 98px solid #af7ead;
   /* a little larger */
   transform-origin: top;
   pointer-events: none;
 }
 
 .pocket {
-  border-left: 140px solid #0077B2;
-  border-right: 140px solid #0077B2;
-  border-bottom: 90px solid #006da3;
+  border-left: 140px solid #dcbadb;
+  border-right: 140px solid #d0a3cf;
+  border-bottom: 90px solid #c493c3;
   border-top: 90px solid transparent;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -53,7 +53,7 @@
 
 .letter {
   position: relative;
-  background-color: #fff;
+  background-color: #efb810;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
