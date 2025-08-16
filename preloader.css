@@ -1,0 +1,224 @@
+body {
+  background-color: #d9b3ff;
+}
+
+.envlope-wrapper {
+  height: 380px;
+}
+
+#envelope {
+  position: fixed; /* Changed from relative to fixed */
+  width: 280px;
+  height: 180px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  background-color: #5a1366; /* Morado oscuro */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 9999; /* To ensure it's on top of other content */
+}
+
+/* Sello central */
+#envelope::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: url('SELLO.png') no-repeat center center;
+  background-size: contain;
+  z-index: 10;
+}
+
+/* Logo esquina inferior derecha */
+.corner-logo {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 50px;
+  height: 50px;
+  background: url('LOGO.png') no-repeat center center;
+  background-size: contain;
+  z-index: 12;
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 82px solid transparent;
+  border-top: 98px solid #5a1366; /* Morado oscuro */
+  transform-origin: top;
+  pointer-events: none;
+}
+
+.pocket {
+  border-left: 140px solid #9b4cbf; /* Morado medio */
+  border-right: 140px solid #9b4cbf;
+  border-bottom: 90px solid #d9b3ff; /* Morado pastel */
+  border-top: 90px solid transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.letter {
+  position: relative;
+  background-color: #ffd966; /* Dorado claro */
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  top: 5%;
+  border-radius: 6px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+}
+
+.letter:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(230, 184, 0, 0.7) 55%, #e6b800 100%);
+}
+
+.words {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 14%;
+  background-color: #e6b800; /* Dorado oscuro */
+}
+
+.words.line1 { top: 15%; width: 20%; height: 7%; }
+.words.line2 { top: 30%; }
+.words.line3 { top: 50%; }
+.words.line4 { top: 70%; }
+
+.open .flap {
+  transform: rotateX(180deg);
+  transition: transform 0.3s ease, z-index 0.5s;
+  z-index: 1;
+}
+
+.close .flap {
+  transform: rotateX(0deg);
+  transition: transform 0.3s 0.5s ease, z-index 0.5s;
+  z-index: 5;
+}
+
+.close .letter {
+  transform: translateY(0px);
+  transition: transform 0.3s ease, z-index 0.5s;
+  z-index: 1;
+}
+
+/* Carta solo sube cuando el sobre está open + letterUp */
+.open.letterUp .letter {
+  transform: translateY(-60px);
+  transition: transform 0.3s 0.5s ease, z-index 0.5s;
+  z-index: 2;
+}
+
+.open .letter {
+  transform: translateY(0); /* queda quieta al abrir */
+}
+
+/* ======================================
+   CORAZONES ROJOS ANIMADOS (inician ocultos)
+   ====================================== */
+.hearts {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: none; /* ocultos hasta que presione el sello */
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background: #D00000;
+  transform: rotate(-45deg);
+  margin: 20px;
+  animation-fill-mode: forwards;
+}
+
+/* parte redonda izquierda y derecha */
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #D00000;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -25px;
+  left: 0;
+}
+
+.heart:after {
+  left: 25px;
+  top: 0;
+}
+
+/* Animaciones: solo cuando se agregue .animate */
+.hearts.animate .a1 {
+  left: 20%;
+  transform: scale(0.6) rotate(-45deg);
+  opacity: 1;
+  animation: slideUp 4s linear 1, sideSway 1s ease-in-out 4 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+
+.hearts.animate .a2 {
+  left: 55%;
+  transform: scale(1) rotate(-45deg);
+  opacity: 1;
+  animation: slideUp 5s linear 1, sideSway 3s ease-in-out 2 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+
+.hearts.animate .a3 {
+  left: 10%;
+  transform: scale(0.8) rotate(-45deg);
+  opacity: 1;
+  animation: slideUp 7s linear 1, sideSway 1s ease-in-out 6 alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  0% { top: 0; opacity: 1; }
+  100% { top: -600px; opacity: 0; }
+}
+
+@keyframes sideSway {
+  0% { margin-left: 0px; }
+  100% { margin-left: 50px; }
+}
+
+/* New CSS for the zoom-out effect */
+#preloader {
+  transition: transform 0.5s ease-in; /* Add transition for a smooth zoom-out */
+}
