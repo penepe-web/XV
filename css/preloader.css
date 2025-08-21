@@ -1,0 +1,150 @@
+/* Fondo del preloader */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d9b3ff; /* morado pastel */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sobre */
+.envlope-wrapper {
+  position: relative;
+  width: 280px;
+  height: 180px;
+}
+
+#envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  margin: auto;
+}
+
+.front.flap, .front.pocket {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #9b4cbf; /* morado medio */
+  border: 2px solid #5a1366; /* morado oscuro */
+  border-radius: 6px;
+}
+
+.front.flap {
+  top: 0;
+  transform-origin: top;
+  transform: rotateX(0deg);
+}
+
+.front.pocket {
+  background: #d9b3ff; /* pastel */
+}
+
+/* Carta */
+.letter {
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  width: 260px;
+  height: 160px;
+  background: #f5deb3; /* dorado claro */
+  border: 2px solid #daa520; /* dorado oscuro */
+  transition: transform 1s ease-in-out, top 1s ease-in-out;
+  z-index: 2;
+}
+
+.letter .words {
+  height: 10px;
+  background: #daa520;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#envelope.open.letterUp .letter {
+  top: 40px; /* carta sube un poco */
+}
+
+/* Corazones */
+.hearts {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  position: absolute;
+  animation: floatUp 2s ease-in infinite;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+.heart.a1 { left: -30px; animation-delay: 0s; }
+.heart.a2 { left: 0; animation-delay: 0.3s; }
+.heart.a3 { left: 30px; animation-delay: 0.6s; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(45deg); opacity: 0; }
+}
+
+/* Animación zoomOut de la carta */
+@keyframes zoomOutCard {
+  0% { transform: translateY(-60px) scale(1); opacity: 1; }
+  100% { transform: translateY(-60px) scale(3); opacity: 0; }
+}
+
+.letter.zoomOut {
+  animation: zoomOutCard 1.5s forwards ease-in-out;
+  z-index: 10;
+}
+
+/* Sello centrado */
+#envelope::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: url("L.png") no-repeat center/contain;
+  z-index: 5;
+  pointer-events: none; /* no bloquea clics */
+}
+
+/* Logo en esquina inferior derecha */
+.corner-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background: url("logo.png") no-repeat center/contain;
+  z-index: 5;
+}

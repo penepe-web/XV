@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambiar imagen con contador</title>
+  <style>
+    #contador {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px;
+    }
+    img {
+      max-width: 300px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="contador"></div>
+  <img id="imagen" src="dia1.png" alt="Imagen 1">
+
+  <script>
+    let tiempo = 5; // segundos de cuenta regresiva
+    let contador = document.getElementById("cambiaimagen");
+    let imagen = document.getElementById("imagen11");
+
+    let intervalo = setInterval(() => {
+      tiempo--;
+
+      if (tiempo <= 0) {
+        clearInterval(intervalo);
+        imagen.src = "dia.png"; // cambia la imagen
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
