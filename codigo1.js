@@ -2,7 +2,7 @@
 $(document).ready(function(){
   $("#btn1").click(function(){
     Swal.fire({
-      title: "0170284440000033103062   DIENTE.MADRE.LUNES",
+      text: "0170284440000033103062   DIENTE.MADRE.LUNES",
       width: 600,
       padding: "3em",
       color: "#716add",
@@ -10,3 +10,4 @@ $(document).ready(function(){
     });
   });
 });
+
