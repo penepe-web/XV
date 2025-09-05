@@ -15,10 +15,11 @@ $(document).ready(function(){
   width: 600,
   padding: "2em",
   background: "#fff url('./img/22.png') no-repeat center center / cover",
-  color: "#c41fed",
+  confirmButtonText: "OK"
     });
   });
 });
+
 
 
 
