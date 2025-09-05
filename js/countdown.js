@@ -6,7 +6,7 @@ month: 11, // required
 
 day: 07, // required
 
-hours: 21, // Default is 0 [0-23] integer
+hours: 0, // Default is 0 [0-23] integer
 
 minutes: 0, // Default is 0 [0-59] integer
 
