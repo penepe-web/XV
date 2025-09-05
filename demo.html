@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Preloader</title>
+  <link rel="stylesheet" href="css/preloader.css">
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+          <div class="words line1"></div>
+          <div class="words line2"></div>
+          <div class="words line3"></div>
+          <div class="words line4"></div>
+        </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
+        <!-- logo en la esquina inferior derecha -->
+        <div class="corner-logo"></div>
+      </div>
+    </div>
+    <audio id="music">
+      <source src="audio/musica.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- CONTENIDO DE PRUEBA -->
+  <div id="main-content" style="display:none; text-align:center; padding-top:50px;">
+    <h1>🎉 Demo del Preloader</h1>
+    <p>Si ves esto, es porque el sobre funcionó y desapareció con el zoom de la carta.</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/preloader.js"></script>
+</body>
+</html>

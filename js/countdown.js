@@ -2,7 +2,7 @@ simplyCountdown('#cuenta', {
 
 year: 2025, // required
 
-month: 11, // required
+month: 08, // required
 
 day: 19, // required
 

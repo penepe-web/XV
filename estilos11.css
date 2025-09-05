@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  background-color: #f2f4f6;
+}
+header{
+    height: 70px;
+    background:#f38370;
+    margin-bottom: 50px;
+}
+
+/* Fondo morado pastel */
+.my-popup {
+  background-color: #e6ccff !important; /* morado pastel */
+  text-align: center; /* Centrar el texto */
+  word-wrap: break-word; /* Evita que se salga */
+  max-width: 90vw; /* No se pasa del ancho de la pantalla */
+}
+
+/* Botón morado */
+.my-button {
+  background-color: #800080 !important; /* morado fuerte */
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+}
+.my-button:hover {
+  background-color: #a64ca6 !important; /* tono más claro al pasar mouse */
+}

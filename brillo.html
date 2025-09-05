@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Brillo en Imágenes</title>
+<style>
+  body {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  img {
+    width: 250px;
+    height: auto;
+    filter: brightness(1);       /* brillo normal */
+    transition: filter 0.3s;     /* transición suave */
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  img:hover {
+    filter: brightness(1.5);     /* se vuelve más brillante al pasar el mouse */
+  }
+</style>
+</head>
+<body>
+
+<img src="imagen1.jpg" alt="Imagen 1">
+<img src="imagen2.jpg" alt="Imagen 2">
+<img src="imagen3.jpg" alt="Imagen 3">
+
+</body>
+</html>
