@@ -30,7 +30,12 @@ header{
 .my-button:hover {
   background-color: #a64ca6 !important; /* tono más claro al pasar mouse */
 }
-/* Quitar línea gris del modal */
+/* Quita cualquier línea debajo del contenido */
 .swal2-html-container {
   border: none !important;
+  padding: 0 !important;
+}
+
+.swal2-html-container::before {
+  display: none !important;
 }
