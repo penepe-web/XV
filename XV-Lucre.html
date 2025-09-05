@@ -3,9 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>XV Lucre</title>
-    <meta content="width=device-width, initial-scale=1.0"&amp;gt; name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="18-10-2024" name="keywords">
     <meta content="18-10-2024" name="description">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">	
+      
+    <link rel="stylesheet" href="plugins/sweetAlert2/sweetalert2.min.css">  
+      
+    <link rel="stylesheet" href="plugins/animate.css/animate.css">  
+	<link rel="stylesheet" href="estilos11.css">
 
     <!-- Favicon -->
     <link href="img/boda.ico" rel="icon">
@@ -24,19 +32,18 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/estilos.css">
-  <link href="preloader.css" rel="stylesheet">
+    <link href="preloader.css" rel="stylesheet">
 
 <style>
-body{
-background-image: url("img/22.jpg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
+body {
+  background-image: url("img/22.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
-dia{
-text-align: center;
+dia {
+  text-align: center;
 }
 </style>
 </head>
@@ -44,26 +51,24 @@ text-align: center;
 <body>
   <!-- PRELOADER -->
   <div id="preloader">
-<div class="envlope-wrapper">
-    <div id="envelope" class="close">
-        <div class="front flap"></div>
-        <div class="front pocket"></div>
-        <div class="letter">
-            <div class="words line1"></div>
-            <div class="words line2"></div>
-            <div class="words line3"></div>
-            <div class="words line4"></div>
+    <div class="envlope-wrapper">
+        <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+                <div class="words line1"></div>
+                <div class="words line2"></div>
+                <div class="words line3"></div>
+                <div class="words line4"></div>
+            </div>
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
+            </div>
+            <div class="corner-logo"></div>
         </div>
-        <div class="hearts">
-            <div class="heart a1"></div>
-            <div class="heart a2"></div>
-            <div class="heart a3"></div>
-        </div>
-        <!-- logo en la esquina inferior derecha -->
-        <div class="corner-logo"></div>
     </div>
-</div>
-
     <audio id="music">
       <source src="audio/musica.mp3" type="audio/mpeg">
     </audio>
@@ -71,244 +76,179 @@ text-align: center;
 
   <!-- CONTENIDO PRINCIPAL -->
   <div id="main-content" style="display:none;">
-    <!-- ====== TU HTML PRINCIPAL COMPLETO ====== -->
-    <!-- Copié todo el contenido que ya tenías en tu invitación -->
-    
+
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5 pb-5" id="home">
+    <div class="container-fluid p-0 mb-3 pb-3" id="home">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-end pb-5">
                         <div class="p-3" style="max-width: 900px;">
-<h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">¡CUMPLO 15!</h3>
-<br>
-<br>
-<br>
-<h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Y me encantaría compartir ese día contigo</h3>
-<br>
-<br>
-<br>
+                            <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">¡CUMPLO 15!</h3>
+                            <br>
+                            <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Y me encantaría compartir ese día contigo</h3>
+                            <br>
                             <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Lucrecia</h1>
-<br>
-<br>
-<br>
-                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">OSVALDO 00 DE .....BRE DE 2025</h3>
+                            <br>
+                            <div class="d-inline-block border-top border-bottom border-light py-2 px-3">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">VIERNES 07 DE NOVIEMBRE DE 2025</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                            <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
-                
-            </a>
-            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
-                
-            </a>
+            </div>
         </div>
-<img class="img-fluid mb-4" src="separador.png" alt="">
     </div>
     <!-- Carousel End -->
-
+            <img class="img-fluid mb-3" src="img/separador2.png" alt="">
     <!-- contador Start -->
-<div id="cuenta" style="visibility:visible;"></div>
-<div id="diafalta" class="section-title position-relative text-center" style="visibility:visible;">
-                <h1 class="font-secondary display-4">para el gran día...</h1>
-<i class="far fa-heart text-dark"></i>
-</div>
-<div id="dia" class="section-title position-relative text-center" style="visibility:hidden;">
-                <h1 class="font-secondary display-4">El gran día llegó!!!</h1>
-<i class="far fa-heart text-dark"></i>
-</div>
+    <div class="container-fluid bg-dark text-white py-3" id="cuenta"></div>
+    <div id="diafalta" class="section-title position-relative text-center">
+        <h1 class="font-secondary display-4" id="countdown-text">para el gran día...</h1>
+        <i class="far fa-heart text-dark"></i>
+<br>
+    </div>
+            <img class="img-fluid mb-3" id="countdown-img" src="img/globos.png" alt="">
+<br>
+<br>
+            <img class="img-fluid mb-3" src="img/groomsmen-1.jpg" alt="">
     <!-- contador End -->
 
     <!-- Event Start -->
-    <div class="container-fluid py-5" id="event">
-        <div class="container py-5">
+    <div class="container-fluid py-3" id="event">
+        <div class="container py-3">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-4">Dónde? Cuándo?</h1>
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Te espero...</h6>
+                <h6 class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">Te espero...</h6>
                 <i class="far fa-heart text-dark"></i>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3"></h5>
-                </div>
             </div>
             <div class="row">
-                  <div class="col-md-6">
+                <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
-                        <img class="img-fluid mb-4" src="img/about-2.gif" alt="">
-                        <u><h4 class="mb-3">Fiesta</h4></u>
-				<h5 class="mb-3">TE GREY</h5>
-                        <p class="mb-3">Lateral Norte Accesso Este y Carril Ponce</p>
-			<p class="mb-3">Guaymallén, Mendoza</p>
-                        <p class="mb-3">00:00 Hs</p>
-  <br>
-                  <img class="img-fluid mb-4" src="img/ubi.gif" alt="">
-                    <br>
-			      <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" onclick="location.href='https://www.google.com/maps/dir//Salon+Te+Grey+Eventos,+Lateral+Norte+Acceso+Este+y,+Carril+Ponce,+Rodeo+de+la+Cruz,+Mendoza/@-32.9337851,-68.7487524,614m/data=!3m1!1e3!4m17!1m7!3m6!1s0x967e0db945ddfeaf:0x7eabe65657c3796b!2sSalon+Te+Grey+Eventos!8m2!3d-32.9337896!4d-68.7461775!16s%2Fg%2F11c3s95__z!4m8!1m0!1m5!1m1!1s0x967e0db945ddfeaf:0x7eabe65657c3796b!2m2!1d-68.7461775!2d-32.9337896!3e2!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D'">Como llegar</button>    
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Event End -->
-
-    <!-- Cancion Start
-    <div class="container-fluid py-5" id="rsvp">
-        <div class="container py-5">
-            <div class="section-title position-relative text-center">
-                <h1 class="font-secondary display-4">¿Canciones que no pueden faltar?</h1>
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Sugerir antes del 30 de septiembre 2024</h6>
-                <i class="far fa-heart text-dark"></i>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <img class="img-fluid mb-4" src="img/cancion.gif" alt="">
-                            <div>
-				<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-				<div class="elfsight-app-a7064d28-1730-494f-be89-92af6fdff383" data-elfsight-app-lazy></div>
-                            </div>
+                        <img class="img-fluid mb-3" src="img/about-2.gif" alt="">
+                        <u><h4 class="mb-2">Fiesta</h4></u>
+				        <h5 class="mb-2">TE GREY</h5>
+                        <p class="mb-2">Lateral Norte Accesso Este y Carril Ponce</p>
+			            <p class="mb-2">Guaymallén, Mendoza</p>
+                        <p class="mb-2">21:00 Hs</p>
+                        <img class="img-fluid mb-3" src="img/ubi.gif" alt="">
+<br>
+			            <button class="btn btn-primary font-weight-bold py-2 px-4" type="submit" onclick="location.href='https://www.google.com/maps/dir//Lateral+Norte+Acceso+Este+y,+Carril+Ponce,+Rodeo+de+la+Cruz,+Mendoza/@-32.9337626,-68.8285787,19641m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x967e0db945ddfeaf:0x7eabe65657c3796b!2m2!1d-68.7461775!2d-32.9337896!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDkwMi4wIKXMDSoASAFQAw%3D%3D">Como llegar</button>    
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    Cancion End -->
+            <img class="img-fluid mb-3" src="img/groomsmen-2.png" alt="">
+    <!-- Event End -->
 
     <!-- regalo Start -->
-    <div class="container-fluid text-white py-5" id="contact" style="margin-top: 90px;">
-        <div class="container text-center py-5">
+    <div class="container-fluid text-white py-3" id="contact">
+        <div class="container text-center py-3">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-3 text-dark">Regalo</h1>
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Tu presencia es el mejor regalo, sin embargo, si deseas darme un obsequio...</h6>
-                <i class="far fa-heart text-dark"></i>
+                <h6 class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">¡Tu presencia es el regalo más importante!</h6>
 		<br>
-	    </div>
-            <img class="img-fluid mb-4" src="img/regalo.gif" alt="">
-            <div class="d-flex justify-content-center py-1">
-                <p class="text-dark" href="#">CBU:</p>
-            </div>
-            <div class="d-flex justify-content-center py-1">
-                <p class="text-dark" href="#">0000000000000000000000</p>
-            </div>
-            <div class="d-flex justify-content-center py-1">
-                <p class="text-dark" href="#">ALIAS:</p>
-            </div>
-            <div class="d-flex justify-content-center py-1">
-                <p class="text-dark" href="#">AAAA.BBBBB.CCCCCC</p>
-            </div>
-            <br>
-            <img class="img-fluid mb-4" src="img/carta.gif" alt="">
+                <h6 class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">Pero si deseas hacerme un obsequio, en el salón encontrarás un buzón donde dejar tu sobre o podrás depositar en la siguiente cuenta:</h6>
+                <i class="far fa-heart text-dark"></i>
+		    </div>
+            <img class="img-fluid mb-3" src="img/regalo.gif" alt="">
+	    <button id="btn1" class="btn btn-primary font-weight-bold py-2 px-4">CBU / Alias</button>
+		<br>
+                <br>
+      <!--      <p class="text-dark">CBU: 0000000000000000000000</p>
+            <p class="text-dark">ALIAS: AAAA.BBBBB.CCCCCC</p> -->
+            <img class="img-fluid mb-3" src="img/carta.gif" alt="">
         </div>
     </div>
+            <img class="img-fluid mb-3" src="img/groomsmen-3.jpg" alt="">
     <!-- regalo End -->
 
     <!-- RSVP Start -->
-    <div class="container-fluid py-5" id="rsvp">
-        <div class="container py-5">
+    <div class="container-fluid py-3" id="rsvp">
+        <div class="container py-3">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-4">Confirmar Asistencia</h1>
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Confirmar antes del 00 de ......bre 2025</h6>
+                <h6 class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">Confirmar antes del 00 de ......bre 2025</h6>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <img class="img-fluid mb-4" src="img/rules.gif" alt="">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                   <h1 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;"></h1> 
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <img class="img-fluid mb-4" src="img/yes.gif" alt="" onclick="location.href='https://wa.me/542615963666/?text=%C2%A1Hola%21%20Confirmo%20que%20asistir%C3%A9%20a%20los%20mejores%2015%20del%20a%C3%B1o%20%F0%9F%8E%89%E2%9C%A8'" width="100" height="100">
-				    <img class="img-fluid mb-4" src="img/no.gif" alt="" onclick="location.href='https://wa.me/542615963666/?text=%C2%A1Hola%21%20Lamento%20no%20poder%20asistir%20a%20la%20tremenda%20fiesta%20%F0%9F%98%A2%20%C2%A1Que%20la%20pasen%20incre%C3%ADble%21'" width="100" height="100">
-                                </div>
-                            </div>
-                                        <div>
-
-                            </div>
-                        </form>
-                    </div>
+            <div class="text-center">
+                <img class="img-fluid mb-3" src="img/rules.gif" alt="">
+                <div>
+                    <img class="img-fluid mb-3" src="img/yes.gif" alt="" onclick="location.href='https://wa.me/542614700390/?text=Confirmo%20que%20asistiré...'" width="100" height="100">
+				    <img class="img-fluid mb-3" src="img/no.gif" alt="" onclick="location.href='https://wa.me/542614700390/?text=Lamento%20no%20poder%20asistir...'" width="100" height="100">
                 </div>
             </div>
         </div>
     </div>
+            <img class="img-fluid mb-3" src="img/separador1.png" alt="">
     <!-- RSVP End -->
 
-
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
-        <div class="container text-center py-5">
+    <div class="container-fluid bg-dark text-white py-3" id="contact">
+        <div class="container text-center py-3">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-3 text-white">¡Los espero...</h1>
-		<h1 class="font-secondary display-3 text-white">con muchas ganas!</h1>
+		        <h1 class="font-secondary display-3 text-white">con muchas ganas!</h1>
                 <i class="far fa-heart text-white"></i>
             </div>
-                                <br>
-                  <img class="img-fluid mb-4" src="img/camara.gif" alt="">
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="img/groomsmen-1.jpg" alt="">
-                    </div>
-                </div>
-	</div>
+        </div>
     </div>
     <!-- Footer End -->
 
-<!-- anuncio Start -->
-            <div class="container text-center py-5">
-		    <i class="far fa-heart text-white"></i>
-                <p class="text-white" href="#"></p>
-            <p class="m-0">&copy; <a class="text-primary" href="#">XV Lucre</a>. Diseñado por <a class="text-primary" href="#">PeNePe - Web</a>
-<br>
-<br>
-<img class="img-fluid" src="img/penepe.png" alt="" width="70" height="70"> <img class="img-fluid" src="img/wp.png" alt="" width="70" height="70" onclick="location.href='https://wa.link/6b58w6'">
-            </p>
-            </div>
-<!-- anuncio End -->
+    <!-- anuncio Start -->
+    <div class="container text-center py-3">
+        <i class="far fa-heart text-dark"></i>
+        <p class="m-0 text-dark">&copy; <a class="text-primary" href="#">XV Lucre</a>. Diseñado por <a class="text-primary" href="#">PeNePe - Web</a></p>
+        <img class="img-fluid" src="img/penepe.png" alt="" width="70" height="70"> 
+        <img class="img-fluid" src="img/wp.png" alt="" width="70" height="70" onclick="location.href='https://wa.link/6b58w6'">
+    </div>
+    <!-- anuncio End -->
+
   </div> <!-- FIN MAIN CONTENT -->
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-
-  <!--  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="js/sweetAlert.js"></script>
-	 JavaScript Libraries <script src="js/sweetAlert2.js"></script>-->
-
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="js/simplyCountdown.min.js"></script>
-	<script src="js/countdown.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/simplyCountdown.min.js"></script>
+  <script src="js/countdown.js"></script>
   <script src="preloader.js"></script>
-	<audio id="audio1" loop>
-	<source src="audio/musica.mp3" type="audio/mpeg">
-	</audio>
+
+    <script src="jquery/jquery-3.3.1.min.js"></script>	 	
+    <script src="popper/popper.min.js"></script>	 	 	
+    <script src="bootstrap4/js/bootstrap.min.js"></script>
+	  
+    <!--    Plugin sweet Alert 2  -->
+	<script src="plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+      
+    <script src="codigo1.js"></script> 	  
+
+  <audio id="audio1" loop>
+    <source src="audio/musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    let tiempo = 5; // segundos de cuenta regresiva
+    let contador = document.getElementById("cambiaimagen");
+    let imagen = document.getElementById("imagen11");
+
+    let intervalo = setInterval(() => {
+      tiempo--;
+
+      if (tiempo <= 0) {
+        clearInterval(intervalo);
+        imagen.src = "dia.png"; // cambia la imagen
+      }
+    }, 1000);
+  </script>
+
 <script>
 function PlayAudio(){
 document.getElementById("audio1").play();
