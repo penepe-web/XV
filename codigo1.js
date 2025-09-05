@@ -6,8 +6,9 @@ $(document).ready(function(){
       width: 600,
       padding: "3em",
       color: "#716add",
-      background: "#fff url(/img/22.png)",
+      background: "#cca9dd",
     });
   });
 });
+
 
